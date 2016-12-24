@@ -5,11 +5,16 @@
  */
 package app.java.data.dao.fileconnector;
 
+import app.java.exceptions.data.EmptyResultException;
+import java.io.FileNotFoundException;
+
 /**
  *
  * @author Philipp Gagel
  */
 public abstract class AFileConnector {
+    protected final static String lineSeparator = System.getProperty("line.separator");
+    
     private String path;
     private String file;
     
@@ -26,7 +31,7 @@ public abstract class AFileConnector {
         return path;
     }
 
-    public void setPath(String path) {
+    public void setPath(String path) throws FileNotFoundException {
         this.path = path;
     }
 
@@ -34,8 +39,26 @@ public abstract class AFileConnector {
         return file;
     }
 
-    public void setFile(String file) {
+    public void setFile(String file) throws FileNotFoundException {
         this.file = file;
+    }
+    
+    protected String getAttributeFromData(String attrName, String data) throws EmptyResultException{
+        String[] attrPairs = data.split(";");
+        for(String attrPair : attrPairs){
+            String[] attrPairArr = attrPair.split("=");
+            if(attrPairArr[0].equals(attrName)){
+                return attrPairArr[1];
+            }
+        }
+        throw new EmptyResultException("No attribute with name found in data.");
+    }
+    
+    protected int getIdFromDataString(String data){
+        String idPair = data.split(";")[0];
+        String idString = idPair.split("=")[1];
+        Integer id = Integer.valueOf(idString);
+        return id;
     }
     
 }

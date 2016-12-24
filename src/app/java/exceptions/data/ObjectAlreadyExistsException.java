@@ -9,11 +9,11 @@ import app.java.exceptions.ATreeException;
 
 /**
  *
- * @author Philipp
+ * @author Philipp Gagel
  */
-public class EmptyResultException extends ATreeException{
+public class ObjectAlreadyExistsException extends ATreeException {
 
-    public EmptyResultException(String no_such_element_with_the_given_id) {
+    public ObjectAlreadyExistsException(String old_and_new_id_are_different_and_new_id_a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
