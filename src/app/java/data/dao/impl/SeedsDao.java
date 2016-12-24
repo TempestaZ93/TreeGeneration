@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package app.java.data.dao.intfc;
+package app.java.data.dao.impl;
 
 import app.java.common.Seed;
+import app.java.data.dao.intfc.IGenericDao;
+import app.java.data.dao.intfc.ISeedDao;
 import app.java.exceptions.data.EmptyResultException;
 import java.util.Collection;
 
@@ -13,11 +15,11 @@ import java.util.Collection;
  *
  * @author Philipp Gagel
  */
-public class SeedsDao implements IGenericDao<Seed>{
+public class SeedsDao implements ISeedDao{
 
     @Override
     public boolean create(Seed t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
 
     @Override
