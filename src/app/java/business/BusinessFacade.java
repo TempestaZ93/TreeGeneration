@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package java.app.exceptions.data;
-
-import java.app.exceptions.ATreeException;
+package app.java.business;
 
 /**
- *
+ * 
+ * This class is the only way to communicate with the 
+ * business logic from outside this package.
+ * 
  * @author Philipp
  */
-public class EmptyResultException extends ATreeException{
+public class BusinessFacade {
     
 }

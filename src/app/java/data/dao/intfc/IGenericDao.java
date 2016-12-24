@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package java.app.data.dao.intfc;
+package app.java.data.dao.intfc;
 
-import java.app.exceptions.data.EmptyResultException;
+import app.java.exceptions.data.EmptyResultException;
 import java.util.Collection;
 
 /**
@@ -47,7 +47,7 @@ public interface IGenericDao<T> {
      * 
      * @param t This object holds all necessary data to specify a single object.
      * @return The found object if there was one.
-     * @throws java.app.exceptions.data.EmptyResultException if there was no 
+     * @throws app.java.exceptions.data.EmptyResultException if there was no 
      * Object with the given data
      */
     T getSingle(T t) throws EmptyResultException;

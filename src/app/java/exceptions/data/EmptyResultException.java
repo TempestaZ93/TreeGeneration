@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package java.app.data;
+package app.java.exceptions.data;
+
+import app.java.exceptions.ATreeException;
 
 /**
  *
- * This class is the only way to communicate with the 
- * data access from outside this package.
- *  
  * @author Philipp
  */
-public class DataFacade {
+public class EmptyResultException extends ATreeException{
     
 }

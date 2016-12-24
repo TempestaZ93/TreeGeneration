@@ -1,4 +1,4 @@
-package java.app.exceptions;
+package app.java.exceptions;
 
 /**
  *
